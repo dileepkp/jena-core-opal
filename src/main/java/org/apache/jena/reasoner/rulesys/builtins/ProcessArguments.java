@@ -93,7 +93,7 @@ public class ProcessArguments extends BaseBuiltin {
             if(context.contains(varOfArg, C.Nodes.HasType, C.Nodes.PointerType) ||
                     isGlobalVariable != null ){
                 Node psNode = NodeFactory.createBlankNode();
-                 context.add( new Triple( varOfArg, PA.Nodes.HasPointerState, psNode) );
+                 context.add( new Triple( varOfArg, PA.Nodes.HasState, psNode) );
                  context.add( new Triple( psNode, PA.Nodes.AtProgramPoint, pp) );
                  context.add( new Triple( psNode, PA.Nodes.StateValue, unknown) );
                  context.add( new Triple( psNode, PA.Nodes.StateRelation, equals) );

@@ -116,7 +116,7 @@ public class GetValueOfExpression  extends BaseBuiltin  {
     private static Node getValueofVariable(Node var, Node prevPP,RuleContext context) {
         //(?var pa:hasPointerState ?ps2)
 	//(?ps2 pa:atProgramPoint ?prevPP)
-	Node pointerState = Util.getJoinPropValue(var, PA.Nodes.HasPointerState, PA.Nodes.AtProgramPoint ,prevPP,  context);
+	Node pointerState = Util.getJoinPropValue(var, PA.Nodes.HasState, PA.Nodes.AtProgramPoint ,prevPP,  context);
         if(pointerState == null){
            return null; 
         }

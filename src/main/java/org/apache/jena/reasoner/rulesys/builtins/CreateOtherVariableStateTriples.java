@@ -79,7 +79,7 @@ public class CreateOtherVariableStateTriples extends BaseBuiltin {
   //      List<Node>l = Util.convertList(n0, context);
         for ( Node var : variables )
         {
-          Node ps = Util.getJoinPropValue(var,PA.Nodes.HasPointerState,PA.Nodes.AtProgramPoint,prevpp, context);
+          Node ps = Util.getJoinPropValue(var,PA.Nodes.HasState,PA.Nodes.AtProgramPoint,prevpp, context);
           if(ps != null)
           context.add( new Triple( ps, PA.Nodes.AtProgramPoint,pp ) );
         }

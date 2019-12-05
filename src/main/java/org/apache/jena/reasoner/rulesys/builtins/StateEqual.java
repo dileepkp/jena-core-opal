@@ -70,8 +70,8 @@ public class StateEqual extends BaseBuiltin {
     protected static boolean stateEqual(Node varList, Node pp1, Node pp2, RuleContext context) {
        for (Iterator<Triple> ni = context.find(varList, RDF.Nodes.item, null); ni.hasNext(); ) {
             Node var = ni.next().getObject();
-            Node pointerState = Util.getJoinPropValue(var, PA.Nodes.HasPointerState, PA.Nodes.AtProgramPoint ,pp1,  context);
-            Node pointerState2 = Util.getJoinPropValue(var, PA.Nodes.HasPointerState, PA.Nodes.AtProgramPoint ,pp2,  context);
+            Node pointerState = Util.getJoinPropValue(var, PA.Nodes.HasState, PA.Nodes.AtProgramPoint ,pp1,  context);
+            Node pointerState2 = Util.getJoinPropValue(var, PA.Nodes.HasState, PA.Nodes.AtProgramPoint ,pp2,  context);
            
             if((pointerState == null && pointerState2 != null) || (pointerState != null && pointerState2 == null))
                 return false;

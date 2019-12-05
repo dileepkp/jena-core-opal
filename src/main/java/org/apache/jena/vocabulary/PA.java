@@ -58,7 +58,7 @@ public class PA{
     public static final Resource    unknown          = Init.unknown();
     public static final Resource    equals          = Init.equals();
  
-    public static final Property    hasPointerState        = Init.hasPointerState();
+   // public static final Property    hasPointerState        = Init.hasPointerState();
     public static final Property    atProgramPoint        = Init.atProgramPoint();
     public static final Property    lastStatementInLoop        = Init.lastStatementInLoop();
     public static final Property    stateValue        = Init.stateValue();
@@ -82,7 +82,7 @@ public class PA{
        
          public static Resource equals() { return resource( "equals" ); }
        
-        public static Property hasPointerState()            { return property( "hasPointerState" ); }
+       // public static Property hasPointerState()            { return property( "hasPointerState" ); }
         public static Property hasState()            { return property( "hasState" ); }
         public static Property atProgramPoint()            { return property( "atProgramPoint" ); }
         public static Property stateValue()            { return property( "stateValue" ); }
@@ -106,8 +106,8 @@ public class PA{
          public static final Node unknown        = Init.unknown().asNode();
          public static final Node equals        = Init.equals().asNode();
          
-        public static final Node HasPointerState        = Init.hasPointerState().asNode();
         public static final Node HasState        = Init.hasState().asNode();
+        //public static final Node HasState        = Init.hasState().asNode();
         public static final Node AtProgramPoint        = Init.atProgramPoint().asNode();
         public static final Node StateValue        = Init.stateValue().asNode();
         public static final Node StateRelation        = Init.stateRelation().asNode();
